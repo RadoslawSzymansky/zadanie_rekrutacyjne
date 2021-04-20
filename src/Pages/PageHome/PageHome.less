@@ -1,0 +1,43 @@
+@import "../../variables.less";
+
+.page-home {
+
+  .header-home {
+    position: relative;
+    width: 100vw;
+
+    &__img {
+      width: 150%;
+      height: auto;
+      transform: translateX(-25%);
+      filter: brightness(50%);
+
+      @media @lg {
+        width: 100%;
+        transform: translateX(0);
+      }
+    }
+
+    &__content {
+      position: absolute;
+
+      top: 50%;
+      left: 0;
+      width: 100%;
+
+      transform: translateY(-50%);
+
+      text-align: center;
+
+      color: #fff;
+
+      font-size: 9vw;
+
+      @media @lg {
+        width: 100%;
+
+        font-size: 7vw;
+      }
+    }
+  }
+}

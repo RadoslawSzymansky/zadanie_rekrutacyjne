@@ -12,7 +12,6 @@ const Routes = () => {
 
   return (
     <Switch>
-      
       <Route exact={true} path="/">
         <PageHome />
       </Route>
