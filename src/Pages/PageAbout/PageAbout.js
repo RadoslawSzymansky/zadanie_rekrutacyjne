@@ -1,6 +1,10 @@
 import React from 'react';
 import './PageAbout.less';
-import imgProfile from '../../img/profilowe.jpg'
+import imgProfile from '../../img/profilowe.jpg';
+import { SRLWrapper } from "simple-react-lightbox";
+import imgBuildings from '../../img/buildings.jpg';
+import imgHands from '../../img/hands.jpg';
+import imgPeople from '../../img/people.jpg';
 
 const PageAbout = () => {
   return (
@@ -30,6 +34,25 @@ const PageAbout = () => {
           </p>
         </div>
       </div>
+      <SRLWrapper>
+        <div className="container">
+          <div className="gallery">
+            <div>
+              <a href={imgBuildings}>
+                <img src={imgBuildings} alt="Umbrella" />
+              </a>
+            </div>
+            <div>
+              <a href={imgPeople}>
+                <img src={imgPeople} alt="Umbrella" />
+              </a>
+              <a href={imgHands}>
+                <img src={imgHands} alt="Umbrella" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </SRLWrapper>
     </div>
   )
 };
