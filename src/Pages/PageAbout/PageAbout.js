@@ -1,5 +1,9 @@
 import React from 'react';
+import Carousel from 'react-tiny-slider';
+import technologies from '../../utils/technologies';
+
 import './PageAbout.less';
+
 import imgProfile from '../../img/profilowe.jpg';
 import { SRLWrapper } from "simple-react-lightbox";
 import imgBuildings from '../../img/buildings.jpg';
@@ -30,10 +34,27 @@ const PageAbout = () => {
             
           </p>
           <p>
-            It was a really good experience, but my dream (or maybe i should say goal) it's become a React Front-End Developer!
+            It was a really good experience, but my dream (or maybe i should say goal) it's become a React Front-End Developer! Below you can find technologies, that i already know.
           </p>
         </div>
       </div>
+      <Carousel
+        swipeAngle={false}
+        mouseDrag
+        controls={false}
+        autoplayButtonOutput={false}
+        nav={false}
+        autoWidth
+        autoplay
+      >
+        {technologies.map((slide) => {
+          return <div>
+            <div>
+              <img src={slide}  alt="technologie" />
+            </div>
+          </div>
+        })}
+      </Carousel>
       <SRLWrapper>
         <div className="container">
           <div className="gallery">
