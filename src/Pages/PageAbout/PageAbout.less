@@ -1,0 +1,108 @@
+@import '../../variables.less';
+
+.page-about {
+
+  &__header {
+    position: relative;
+    padding: 45px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 32px;
+
+    @media @xl {
+      padding: 60px 0;
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      background-color: #fff;
+      width: 25vw;
+      height: 100%;
+      top: 0;
+      left: 75%;
+      transform: skew(45deg);
+      z-index: 0;
+
+      @media @lg {
+        display: v
+        ;
+      }
+
+
+      @media @xxl {
+        left: 68%;
+      }
+    }
+
+    > div {
+      position: relative;
+      letter-spacing: 2px;
+      font-weight: 300;
+      z-index: 2;
+
+      p {
+        font-size: 23px;
+
+        @media @lg {
+          font-size: 28px;
+        }
+
+        @media @xl {
+          font-size: 32px;
+        }
+        
+        @media @xxl {
+          font-size: 36px;
+        }
+
+        p {
+          font-size: .8em;
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  .author-img {
+    max-width: 150px;
+    margin-right: 20px;
+
+    @media @md {
+      margin-right: 40px;
+    }
+
+    @media @lg {
+      margin-right: 70px;
+    }
+  }
+
+  &__text {
+    
+    padding: 30px 0;
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    p {
+      max-width: 900px;
+      margin-bottom: 10px;
+      padding-right: 20%;
+      line-height: 1.8;
+
+      font-size: 14px;
+      font-weight: 300;
+
+      @media @lg {
+        font-size: 16px;
+      }
+
+      @media @xl {
+        font-size: 18px;
+      }
+    }
+  }
+}
