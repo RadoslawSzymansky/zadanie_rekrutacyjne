@@ -24,7 +24,7 @@ export default function (state = initialState, action) {
     case FETCH_MOVIES_SUCCESS:
       return {
         ...state, 
-        moviesList: action.payload,
+        moviesList: action.payload.results,
         moviesAreLoading: false
 
       };

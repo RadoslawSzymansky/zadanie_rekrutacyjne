@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Carousel from 'react-tiny-slider';
+import MoviesList from '../../Containers/MoviesList/MoviesListContainer';
 import technologies from '../../utils/technologies';
 
 import './PageAbout.less';
@@ -11,6 +12,9 @@ import imgHands from '../../img/hands.jpg';
 import imgPeople from '../../img/people.jpg';
 
 const PageAbout = () => {
+
+  const carousel = useRef(null)
+  
   return (
     <div className="page-about">
       <div className="page-about__header">
@@ -19,7 +23,8 @@ const PageAbout = () => {
             <img className="author-img" src={imgProfile} />
             <p>
               Radosław Szymański
-              <p>Front-End Developer</p>
+              <br></br>
+              <span>Front-End Developer</span>
             </p>
           </div>
         </div>
@@ -45,11 +50,11 @@ const PageAbout = () => {
         autoplayButtonOutput={false}
         nav={false}
         autoWidth
-        autoplay
-      >
-        {technologies.map((slide) => {
-          return <div>
-            <div>
+        ref={carousel}
+        >
+        {technologies.map((slide, i) => {
+          return <div key={i}>
+            <div className={'slide'} >
               <img src={slide}  alt="technologie" />
             </div>
           </div>
@@ -74,6 +79,11 @@ const PageAbout = () => {
           </div>
         </div>
       </SRLWrapper>
+      <div className="section-title">Favorite Movies</div>
+      <div className="movies-wrapper">
+        <MoviesList />
+      </div>
+
     </div>
   )
 };
