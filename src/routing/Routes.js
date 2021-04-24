@@ -7,6 +7,7 @@ import {
 import PageAbout from '../Pages/PageAbout/PageAbout';
 import PageHome from '../Pages/PageHome/PageHome';
 import Page404 from '../Pages/Page404/Page404';
+import PageMovie from '../Pages/PageMovie/PageMovie';
 
 const Routes = () => {
 
@@ -18,9 +19,13 @@ const Routes = () => {
       <Route exact={true} path="/about-me">
         <PageAbout />
       </Route>
+      <Route exact path="/movies/:id">
+        <PageMovie />
+      </Route>
       <Route  path="*">
         <Page404 />
       </Route>
+
     </Switch>
   );
 };
