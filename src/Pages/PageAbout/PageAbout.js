@@ -79,11 +79,12 @@ const PageAbout = () => {
           </div>
         </div>
       </SRLWrapper>
-      <div className="section-title">Favorite Movies</div>
-      <div className="movies-wrapper">
-        <MoviesList />
+      <div className="container">
+        <h2 className="section-title" style={{margin: '30px 0'}}>Favorite Movies</h2>
+        <div className="movies-wrapper ">
+          <MoviesList />
+        </div>
       </div>
-
     </div>
   )
 };
