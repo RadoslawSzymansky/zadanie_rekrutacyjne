@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
-import { fetchMovie } from '../../actions/moviesActions';
+import { fetchMovies } from '../../actions/moviesActions';
 import PageMovie from './PageMovie';
 
 const mapStateToProps = ({movies}) => ({
   moviesList: movies.moviesList,
-  movieIsFailed: movies.moviesAreFailed,
-  movieIsLoading: movies.moviesAreLoading
+  moviesAreFailed: movies.moviesAreFailed,
+  moviesAreLoading: movies.moviesAreLoading
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchMovie: (id) => dispatch(fetchMovie(id)),
+  fetchMovies: () => dispatch(fetchMovies()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PageMovie);

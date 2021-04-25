@@ -2,9 +2,6 @@ import {
   FETCH_MOVIES_LOADING,
   FETCH_MOVIES_FAILED,
   FETCH_MOVIES_SUCCESS,
-  FETCH_MOVIE_LOADING,
-  FETCH_MOVIE_FAILED,
-  FETCH_MOVIE_SUCCESS,
 } from '../actions/types';
 
 const initialState = { 
@@ -36,28 +33,6 @@ export default function (state = initialState, action) {
         ...state,
         moviesList: [],
         moviesAreLoading: false,
-        moviesAreFailed: true
-      };
-
-    case FETCH_MOVIE_LOADING:
-      return {
-        ...state,
-        movieIsLoading: true
-      };
-
-    case FETCH_MOVIE_SUCCESS:
-      return {
-        ...state, 
-        movieIsLoading: false,
-        movies: state.moviesList.push(action.payload)
-      };
-
-    case FETCH_MOVIE_FAILED:
-      return {
-        ...state,
-        moviesList: [],
-        movieIsLoading: false,
-        movieIsFailed: true,
         moviesAreFailed: true
       };
 

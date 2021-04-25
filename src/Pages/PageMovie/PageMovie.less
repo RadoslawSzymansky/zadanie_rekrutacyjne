@@ -1,0 +1,53 @@
+@import '../../variables.less';
+
+.movie-single {
+  padding-top: 25px;
+  margin-bottom: 35px;
+
+  @media @md {
+    display: flex;
+  }
+
+  &__left {
+
+    margin-bottom: 20px;
+
+    @media @md {
+      margin-bottom: 0;
+      max-width: 50%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__right {
+
+    
+    @media @md {
+      max-width: 50%;
+
+      padding-left: 40px;
+    }
+
+    @media @lg {
+      padding-left: 70px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+
+      @media @lg {
+        margin-bottom: 25px;
+        font-size: 28px;
+      }
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+  }
+}
