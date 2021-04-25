@@ -15,10 +15,14 @@ const Navbar = () => {
           </div> 
           <ul className="navbar__list">
             <li>
-              <NavLink exact={true} to="/">Home</NavLink>
+              <NavLink exact={true} to="/" onClick={() => {
+                document.body.classList.remove('menu-opened');
+              }}>Home</NavLink>
             </li>
             <li>
-              <NavLink exact={true} to="/about-me">About Me</NavLink>
+              <NavLink exact={true} to="/about-me" onClick={() => {
+                document.body.classList.remove('menu-opened');
+              }}>About Me</NavLink>
             </li>
           </ul>
           <Burger />

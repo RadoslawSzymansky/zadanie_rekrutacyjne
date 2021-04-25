@@ -5,7 +5,7 @@ import './MoviesList.less';
 
 const MoviesList = ({fetchMovies, moviesList, moviesAreLoading, moviesAreFailed}) => {
   useEffect(() => {
-    !moviesList.length ? fetchMovies() : null;
+    moviesList.length < 6 ? fetchMovies() : null;
   }, []);
 
   if (moviesAreLoading) {
