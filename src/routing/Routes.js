@@ -19,7 +19,7 @@ const Routes = () => {
       <Route exact={true} path="/about-me">
         <PageAbout />
       </Route>
-      <Route exact path="/movies/:id">
+      <Route exact path="/movies/:movieId">
         <PageMovie />
       </Route>
       <Route  path="*">

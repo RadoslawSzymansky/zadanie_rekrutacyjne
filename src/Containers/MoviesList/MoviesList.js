@@ -5,8 +5,8 @@ import './MoviesList.less';
 
 const MoviesList = ({fetchMovies, moviesList, moviesAreLoading, moviesAreFailed}) => {
   useEffect(() => {
-    fetchMovies();
-    }, []);
+    !moviesList.length ? fetchMovies() : null;
+  }, []);
 
   if (moviesAreLoading) {
     return <Spinner />

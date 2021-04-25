@@ -2,12 +2,17 @@ import {
   FETCH_MOVIES_LOADING,
   FETCH_MOVIES_FAILED,
   FETCH_MOVIES_SUCCESS,
+  FETCH_MOVIE_LOADING,
+  FETCH_MOVIE_FAILED,
+  FETCH_MOVIE_SUCCESS,
 } from '../actions/types';
 
 const initialState = { 
   moviesList: [],
   moviesAreFailed: false,
-  moviesAreLoading: false
+  moviesAreLoading: false,
+  movieIsFailed: false,
+  movieIsLoading: false
 };
 
 
